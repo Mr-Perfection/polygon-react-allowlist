@@ -20,4 +20,7 @@ pnpm install -D @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-networ
 pnpm install -D typescript ts-node @types/node @types/chai @types/mocha @ethersproject/bytes dotenv
 pnpm install @openzeppelin/contracts
 pnpm up --latest
+
+# https://hardhat.org/hardhat-chai-matchers/docs/migrate-from-waffle
+pnpm uninstall @nomiclabs/hardhat-waffle ethereum-waffle
 ```
