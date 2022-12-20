@@ -26,5 +26,9 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.0"
+  },
+  "scripts": {
+    "deploy-contract": "npx hardhat compile && npx hardhat run scripts/deploy.ts  --network mumbai"
   }
+    
 }
