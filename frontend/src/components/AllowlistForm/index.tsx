@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { FieldValues, useForm } from "react-hook-form";
+import { Allowlist as AllowlistContract } from '../../../../backend/typechain-types/Allowlist';
 
-export default function AllowlistForm() {
+export default function AllowlistForm({ contract, accounts }: { contract: AllowlistContract | undefined, accounts: string[]}) {
   const {
     register,
     handleSubmit,
     setValue,
     formState: { errors },
   } = useForm();
-  const [storageValue, setStorageValue] = useState(0);
-  // const [storageValue, setStorageValue] = useState(0);
 
   useEffect(() => {
     register("firstName", { required: true });
