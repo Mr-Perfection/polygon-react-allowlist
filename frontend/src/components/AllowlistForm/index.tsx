@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 
 export default function AllowlistForm() {
@@ -8,6 +8,8 @@ export default function AllowlistForm() {
     setValue,
     formState: { errors },
   } = useForm();
+  const [storageValue, setStorageValue] = useState(0);
+  // const [storageValue, setStorageValue] = useState(0);
 
   useEffect(() => {
     register("firstName", { required: true });
