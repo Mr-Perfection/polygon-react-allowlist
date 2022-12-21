@@ -18,7 +18,11 @@ export default function AllowlistForm({ contract, accounts }: { contract: Allowl
 
   async function submitForm(data: FieldValues) {
     const uuid = crypto.randomUUID();
-    contract?._createAllowlister(uuid, { from: accounts[0] });
+    try {
+      contract?._createAllowlister(uuid, { from: accounts[0] });
+    } catch(e) {
+      console.error(e);
+    }
   }
 
   return (
