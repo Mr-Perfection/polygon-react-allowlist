@@ -18,11 +18,15 @@ function App() {
       const provider = new ethers.providers.Web3Provider((window as any).ethereum);
       if (provider) {
         const accounts = await provider.listAccounts();
+        if (accounts.length === 0) {
+          // Connect the app to Metamask accounts.
+          window.ethereum.enable();
+        }
+
         setWeb3Provider(provider);
         setWalletAccounts(accounts);
-
-        // https://mumbai.polygonscan.com/address/0xc115fefce4607e81bf29aaee8d47254c00438294#code
-        setAllowListContract(getAllowlistContract('0xc115fefce4607e81bf29aaee8d47254c00438294'));
+        // https://mumbai.polygonscan.com/address/0xc115FefcE4607E81BF29AaEE8D47254C00438294#code
+        setAllowListContract(getAllowlistContract('0xc115FefcE4607E81BF29AaEE8D47254C00438294'));
       }
     })();
   }, []);
