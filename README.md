@@ -13,7 +13,7 @@ https://github.com/Mr-Perfection/MyDockerDevEnvironmentSetup
 
 
 ### Getting started
-Go through the [wiki](https://wiki.polygon.technology/docs/develop/dapp-fauna-polygon-react/#getting-started. But I'm going to use Hardhat.
+Go through the [wiki](https://wiki.polygon.technology/docs/develop/dapp-fauna-polygon-react/#getting-started). But I'm going to use Hardhat.
 
 To set up Mumbai testnet, I had to manually find one of the available networks from the [chainlist](https://chainlist.org/?search=mumbai&testnets=true).
 
